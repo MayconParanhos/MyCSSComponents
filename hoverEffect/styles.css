@@ -1,0 +1,28 @@
+* {
+    letter-spacing: 4px;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;;
+    color: black;
+    background-color: rgb(42, 127, 129);
+    box-shadow: inset 0 0 0 0 #0e0e93;
+    transition: ease-out .5s;
+}
+
+.btn:hover {
+    box-shadow: inset 0px 0 10px 10px #0e0e93;
+    color: white;
+    cursor: pointer;
+}
