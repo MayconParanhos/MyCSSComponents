@@ -1,0 +1,63 @@
+/* https://github.com/MayconParanhos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(30, 31, 38);
+}
+
+.container {
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+    padding: 3px;
+    transition: box-shadow .5s ease;
+}
+
+.container::before {
+    content: "";
+    background: linear-gradient(90deg, purple, rgb(25, 196, 190), rgb(46, 46, 234), rgb(9, 171, 9), rgb(24, 118, 13));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-size: 100%;
+    z-index: -1;
+}
+
+@keyframes animate {
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.container span {
+    background-color: #3b3b3b;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 0;
+    display: block;
+}
+
+.container:hover::before {
+    animation: animate .85s linear infinite;
+}
+.container:hover {
+    box-shadow: 0 0 10px purple, 
+                0 0 15px rgb(25, 196, 190), 
+                0 0 20px rgb(46, 46, 234), 
+                0 0 25px rgb(9, 171, 9), 
+                0 0 30px rgb(24, 118, 13);
+}
